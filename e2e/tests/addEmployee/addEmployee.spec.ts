@@ -9,9 +9,9 @@ test("Add an employee", async ({ page }) => {
   await page.getByRole("link", { name: "PIM" }).click();
   await page.getByRole("link", { name: "Add Employee" }).click();
   await page.getByPlaceholder("First Name").fill("Tom");
-  await page.getByPlaceholder("Middle Name").fill("Jr");
+  await page.getByPlaceholder("Middle Name").fill("Sr");
   await page.getByPlaceholder("Last Name").fill("Cruise");
-  await page.locator("form").getByRole("textbox").nth(4).fill("321126");
+  await page.locator("form").getByRole("textbox").nth(4).fill("321178");
   await page.getByRole("button", { name: "Save" }).click();
   await expect(page.getByText(/successfully saved/i)).toBeVisible();
 });
